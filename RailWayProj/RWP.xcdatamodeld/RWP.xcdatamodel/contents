@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="RWP" representedClassName=".RWP" syncable="YES">
+        <attribute name="arrivalC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="arrivalCodeC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureCodeC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platformArrC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platformDepC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeArrC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeDepC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeArrivalC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeDepartureC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeTrainC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="versionC" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RWP" positionX="-9035.98046875" positionY="-321.91015625" width="128" height="225"/>
+    </elements>
+</model>
