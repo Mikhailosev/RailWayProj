@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		C3041043223532CD005F6FED /* RWP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3041041223532CD005F6FED /* RWP.xcdatamodeld */; };
 		C304104922355ECF005F6FED /* RoadListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304104822355ECF005F6FED /* RoadListExtension.swift */; };
-		C337D37B2232D1A70046B7D5 /* coreData1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C337D37A2232D1A70046B7D5 /* coreData1.swift */; };
-		C3ADBC292236D0C600F7C04D /* RWP+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADBC272236D0C600F7C04D /* RWP+CoreDataClass.swift */; };
-		C3ADBC2A2236D0C600F7C04D /* RWP+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADBC282236D0C600F7C04D /* RWP+CoreDataProperties.swift */; };
+		C309DC1722381CB700CCBD32 /* ViewControllerAutoArrival.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309DC1622381CB700CCBD32 /* ViewControllerAutoArrival.swift */; };
+		C309DC1922381CD200CCBD32 /* ViewControllerAutoDeparture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309DC1822381CD200CCBD32 /* ViewControllerAutoDeparture.swift */; };
+		C309DC1D2239513E00CCBD32 /* Infinity-1.2s-200px.gif in Resources */ = {isa = PBXBuildFile; fileRef = C309DC1C2239513C00CCBD32 /* Infinity-1.2s-200px.gif */; };
+		C309DC1F2239518900CCBD32 /* ViewControllerLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309DC1E2239518900CCBD32 /* ViewControllerLoading.swift */; };
+		C382CB1B223A5354005D8275 /* RWP+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382CB19223A5354005D8275 /* RWP+CoreDataClass.swift */; };
+		C382CB1C223A5354005D8275 /* RWP+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382CB1A223A5354005D8275 /* RWP+CoreDataProperties.swift */; };
 		C3C011932230642B0027AE0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C011922230642B0027AE0A /* AppDelegate.swift */; };
 		C3C011952230642B0027AE0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C011942230642B0027AE0A /* ViewController.swift */; };
 		C3C011982230642B0027AE0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C011962230642B0027AE0A /* Main.storyboard */; };
@@ -55,9 +58,12 @@
 /* Begin PBXFileReference section */
 		C3041042223532CD005F6FED /* RWP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RWP.xcdatamodel; sourceTree = "<group>"; };
 		C304104822355ECF005F6FED /* RoadListExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadListExtension.swift; sourceTree = "<group>"; };
-		C337D37A2232D1A70046B7D5 /* coreData1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreData1.swift; sourceTree = "<group>"; };
-		C3ADBC272236D0C600F7C04D /* RWP+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RWP+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C3ADBC282236D0C600F7C04D /* RWP+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RWP+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C309DC1622381CB700CCBD32 /* ViewControllerAutoArrival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAutoArrival.swift; sourceTree = "<group>"; };
+		C309DC1822381CD200CCBD32 /* ViewControllerAutoDeparture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAutoDeparture.swift; sourceTree = "<group>"; };
+		C309DC1C2239513C00CCBD32 /* Infinity-1.2s-200px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Infinity-1.2s-200px.gif"; sourceTree = "<group>"; };
+		C309DC1E2239518900CCBD32 /* ViewControllerLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLoading.swift; sourceTree = "<group>"; };
+		C382CB19223A5354005D8275 /* RWP+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RWP+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C382CB1A223A5354005D8275 /* RWP+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RWP+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C3C0118F2230642B0027AE0A /* RailWayProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RailWayProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C011922230642B0027AE0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C011942230642B0027AE0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C382CB21223A66A2005D8275 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3C011942230642B0027AE0A /* ViewController.swift */,
+				C3C011E12232C39D0027AE0A /* TableViewCellData.swift */,
+				C3C011C7223136500027AE0A /* viewForInternet.swift */,
+				C309DC1822381CD200CCBD32 /* ViewControllerAutoDeparture.swift */,
+				C309DC1622381CB700CCBD32 /* ViewControllerAutoArrival.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C382CB22223A66B3005D8275 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C382CB19223A5354005D8275 /* RWP+CoreDataClass.swift */,
+				C382CB1A223A5354005D8275 /* RWP+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C382CB23223A66BA005D8275 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C309DC1E2239518900CCBD32 /* ViewControllerLoading.swift */,
+				C3C011C9223160570027AE0A /* ViewControllerAfterCheck.swift */,
+				C3C011C52231337A0027AE0A /* checkInternet.swift */,
+				C304104822355ECF005F6FED /* RoadListExtension.swift */,
+				C3C011DF2232B6B50027AE0A /* RoadListScreen.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C3C011862230642B0027AE0A = {
 			isa = PBXGroup;
 			children = (
@@ -135,22 +174,15 @@
 		C3C011912230642B0027AE0A /* RailWayProj */ = {
 			isa = PBXGroup;
 			children = (
-				C3ADBC282236D0C600F7C04D /* RWP+CoreDataProperties.swift */,
-				C3ADBC272236D0C600F7C04D /* RWP+CoreDataClass.swift */,
+				C382CB22223A66B3005D8275 /* Model */,
+				C382CB21223A66A2005D8275 /* View */,
+				C382CB23223A66BA005D8275 /* Controller */,
 				C3C011922230642B0027AE0A /* AppDelegate.swift */,
 				C3C011DB223299BE0027AE0A /* Assets.xcassets */,
-				C3C011942230642B0027AE0A /* ViewController.swift */,
-				C3C011C7223136500027AE0A /* viewForInternet.swift */,
-				C3C011DF2232B6B50027AE0A /* RoadListScreen.swift */,
-				C304104822355ECF005F6FED /* RoadListExtension.swift */,
-				C3C011C9223160570027AE0A /* ViewControllerAfterCheck.swift */,
 				C3C011962230642B0027AE0A /* Main.storyboard */,
-				C3C011E12232C39D0027AE0A /* TableViewCellData.swift */,
-				C337D37A2232D1A70046B7D5 /* coreData1.swift */,
 				C3C011C222311D8A0027AE0A /* images */,
 				C3C0119B2230642F0027AE0A /* LaunchScreen.storyboard */,
 				C3C0119E2230642F0027AE0A /* Info.plist */,
-				C3C011C52231337A0027AE0A /* checkInternet.swift */,
 				C3041041223532CD005F6FED /* RWP.xcdatamodeld */,
 			);
 			path = RailWayProj;
@@ -179,6 +211,7 @@
 			children = (
 				C3C011D5223294A70027AE0A /* finish.png */,
 				C3C011D72232974B0027AE0A /* double-angle-pointing-to-right.png */,
+				C309DC1C2239513C00CCBD32 /* Infinity-1.2s-200px.gif */,
 				C3E8BC772233BEC40084CF09 /* down-arrow.png */,
 				C3C011D3223294340027AE0A /* start-4.png */,
 				C3C011D1223170E80027AE0A /* 008 Rainy Ashville.png */,
@@ -298,6 +331,7 @@
 				C3E8BC782233BEC40084CF09 /* down-arrow.png in Resources */,
 				C3C011C4223121100027AE0A /* train.png in Resources */,
 				C3C011DC223299BE0027AE0A /* Assets.xcassets in Resources */,
+				C309DC1D2239513E00CCBD32 /* Infinity-1.2s-200px.gif in Resources */,
 				C3C011CC223168670027AE0A /* panel.png in Resources */,
 				C3C0119D2230642F0027AE0A /* LaunchScreen.storyboard in Resources */,
 				C3C011DE22329BAC0027AE0A /* play-button.png in Resources */,
@@ -331,17 +365,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3041043223532CD005F6FED /* RWP.xcdatamodeld in Sources */,
-				C3ADBC292236D0C600F7C04D /* RWP+CoreDataClass.swift in Sources */,
 				C3C011C62231337A0027AE0A /* checkInternet.swift in Sources */,
+				C309DC1F2239518900CCBD32 /* ViewControllerLoading.swift in Sources */,
 				C3C011E22232C39D0027AE0A /* TableViewCellData.swift in Sources */,
 				C3C011E02232B6B50027AE0A /* RoadListScreen.swift in Sources */,
 				C3C011CA223160570027AE0A /* ViewControllerAfterCheck.swift in Sources */,
 				C3C011952230642B0027AE0A /* ViewController.swift in Sources */,
-				C3ADBC2A2236D0C600F7C04D /* RWP+CoreDataProperties.swift in Sources */,
+				C309DC1922381CD200CCBD32 /* ViewControllerAutoDeparture.swift in Sources */,
 				C3C011932230642B0027AE0A /* AppDelegate.swift in Sources */,
-				C337D37B2232D1A70046B7D5 /* coreData1.swift in Sources */,
+				C382CB1B223A5354005D8275 /* RWP+CoreDataClass.swift in Sources */,
+				C382CB1C223A5354005D8275 /* RWP+CoreDataProperties.swift in Sources */,
 				C304104922355ECF005F6FED /* RoadListExtension.swift in Sources */,
 				C3C011C8223136500027AE0A /* viewForInternet.swift in Sources */,
+				C309DC1722381CB700CCBD32 /* ViewControllerAutoArrival.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

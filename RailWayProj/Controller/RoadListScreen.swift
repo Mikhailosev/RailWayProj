@@ -36,6 +36,7 @@ class RoadListScreen: UIViewController {
     var arrivalFull: String?
     var departureFull: String?
     var lineId: String?
+    var versions:[String]=Array()
     var platformArrival: String?
     var platformDeparture: String?
     var version: String?
@@ -43,21 +44,31 @@ class RoadListScreen: UIViewController {
     var departureTime: String?
     var typeArrival: String?
     var typeDeparture: String?
-    
+    var stations:[String]=Array()
 
     
     @IBOutlet weak var tableView: UITableView!
-    var roads: [tableViewCells] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameToCode()
-        let fetchRequest:NSFetchRequest<RWP> = RWP.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key:"versionC", ascending:true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        let managedContext = appDelegate?.persistentContainer.viewContext
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedContext!, sectionNameKeyPath: "versionC", cacheName: "RWPCache")
-        fetchedResultsController!.delegate = self as? NSFetchedResultsControllerDelegate
-        try? fetchedResultsController?.performFetch()
+        //MARK: FetchReq, sorting, predicating
+
+           let fetchRequest:NSFetchRequest<RWP> = RWP.fetchRequest()
+
+            let sortDescriptor = NSSortDescriptor(key:"versionC", ascending:true)
+            let sortDescriptor2 = NSSortDescriptor(key:"timeDepC", ascending:true)
+            let sortDescriptor3 = NSSortDescriptor(key:"departureC", ascending:true)
+            fetchRequest.sortDescriptors = [sortDescriptor, sortDescriptor2, sortDescriptor3]
+        print(self.version!)
+            let predicate3 = NSPredicate(format: "departureC == %@ ", self.departureFull!)
+            let predicate4 = NSPredicate(format: "arrivalC == %@ ", self.arrivalFull!)
+            let predicate5 = NSPredicate(format: "dateOfTripC == %@ ", self.date!)
+        let andPredicate = NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [predicate5, predicate3, predicate4])
+        fetchRequest.predicate = andPredicate
+            let managedContext = self.appDelegate?.persistentContainer.viewContext
+            self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedContext!, sectionNameKeyPath: "versionC", cacheName: "RWPCache")
+            self.fetchedResultsController!.delegate = self as? NSFetchedResultsControllerDelegate
+            try? self.fetchedResultsController?.performFetch()
+                print(self.version!)
         if let arrival=arrival,
             let departure=departure,
             let date=date {
@@ -65,19 +76,10 @@ class RoadListScreen: UIViewController {
               print ("\(departure)")
               print ("\(date)")
         }
-    roads = createArray()
       
         tableView.delegate=self
         tableView.dataSource=self
         // Do any additional setup after loading the view.
-    }
-    func createArray () -> [tableViewCells] {
-        var tempArr: [tableViewCells]=[]
-        let Cell1 = tableViewCells(title: "Oh lalalaaa")
-        let Cell2 = tableViewCells(title: "Oh lululul")
-        tempArr.append(Cell1)
-        tempArr.append(Cell2)
-        return tempArr
     }
     func Alert (Message: String){
         
@@ -98,6 +100,7 @@ class RoadListScreen: UIViewController {
     */
 
 }
+//MARK: FILLING UP TABLEVIEW
 extension RoadListScreen: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchedResultsController!.sections, sections.count > 0 {
@@ -117,15 +120,15 @@ extension RoadListScreen: UITableViewDataSource, UITableViewDelegate{
             fatalError("error")
         }
         
-        cell.stationName.text = ride.departureC
-        cell.stationTime.text = ride.timeDepC
+        cell.stationName.text = "From "+ride.departureC!
+        cell.stationTime.text = "Time of departure: "+ride.timeDepC!
         cell.stationStatus.text = ride.typeDepartureC
-        cell.stationPlatform.text = ride.platformDepC
-        cell.stationName2.text = ride.arrivalC
-        cell.stationTime2.text = ride.timeArrC
+        cell.stationPlatform.text = "To platform #"+ride.platformDepC!
+        cell.stationName2.text = "To "+ride.arrivalC!
+        cell.stationTime2.text = "Time of arrival "+ride.timeArrC!
         cell.stationStatus2.text = ride.typeArrivalC
-        cell.stationPlatform2.text = ride.platformArrC
-        
+        cell.stationPlatform2.text = "To platform #"+ride.platformArrC!
+        print(ride.versionC)
         
         return cell
     }
@@ -138,6 +141,7 @@ extension RoadListScreen: UITableViewDataSource, UITableViewDelegate{
         print("Controller Changed Content")
         tableView.reloadData()
     }
+   
     
     
 }

@@ -3,6 +3,7 @@
     <entity name="RWP" representedClassName=".RWP" syncable="YES">
         <attribute name="arrivalC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="arrivalCodeC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfTripC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="departureC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="departureCodeC" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="platformArrC" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,6 +16,6 @@
         <attribute name="versionC" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="RWP" positionX="-9035.98046875" positionY="-321.91015625" width="128" height="225"/>
+        <element name="RWP" positionX="-9035.98046875" positionY="-321.91015625" width="128" height="240"/>
     </elements>
 </model>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//MARK: VIEW FOR CHICKING INTERNET
 class ViewController: UIViewController {
     
     @IBAction func action(_ sender: Any) {

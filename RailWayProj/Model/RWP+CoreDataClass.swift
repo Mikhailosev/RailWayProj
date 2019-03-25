@@ -2,7 +2,7 @@
 //  RWP+CoreDataClass.swift
 //  RailWayProj
 //
-//  Created by iosadmin on 11/03/2019.
+//  Created by iosadmin on 14/03/2019.
 //  Copyright © 2019 iosadmin. All rights reserved.
 //
 //
@@ -32,3 +32,4 @@ public class RWP: NSManagedObject {
     }
     
 }
+

@@ -9,6 +9,7 @@
 import UIKit
 
 class TableViewCellData: UITableViewCell {
+    //MARK: VIEW FOR INITIALIZING LABELS
 
 
     @IBOutlet weak var stationName: UILabel!
@@ -19,7 +20,4 @@ class TableViewCellData: UITableViewCell {
     @IBOutlet weak var stationStatus2: UILabel!
     @IBOutlet weak var stationTime2: UILabel!
     @IBOutlet weak var stationPlatform2: UILabel!
-    func setRoad(road: tableViewCells) {
-        
-    }
 }
